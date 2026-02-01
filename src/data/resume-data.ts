@@ -37,9 +37,9 @@ export interface Project {
 
 // Sample Resume Data - Customize this with your own information
 export const resumeData: ResumeData = {
-    name: "Alex Johnson",
-    title: "Full Stack Developer & UI/UX Enthusiast",
-    bio: "Passionate developer with 5+ years of experience building modern web applications. Specialized in TypeScript, React, and Node.js. I love creating beautiful, performant user experiences.",
+    name: "Thipwara Karphondee (Mint)",
+    title: "Quality Assurance Engineer (Manual & Automation)",
+    bio: "     As a Quality Assurance 4 yrs experience in manual and automation testing also team management, I aim to deliver the best quality software for users and for drives the organizations. \n     I specialize in fintech, digital lending, credit card and back office processing. I’m seeking an innovative company to be part of an agile team for the digital transformation.",
 
     skills: [
         {

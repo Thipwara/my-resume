@@ -1,23 +1,23 @@
 /* ===== CSS Variables & Design System ===== */
 :root {
   /* Colors - Vibrant Dark Theme */
-  --color-bg-primary: #0a0e27;
+  --color-bg-primary: #ffffff;
   --color-bg-secondary: #151b3d;
   --color-bg-card: rgba(30, 41, 82, 0.6);
   --color-bg-card-hover: rgba(40, 51, 92, 0.8);
 
-  --color-accent-primary: #6366f1;
-  --color-accent-secondary: #8b5cf6;
+  --color-accent-primary: #f16397;
+  --color-accent-secondary: #b30f6c;
   --color-accent-tertiary: #ec4899;
 
   --color-text-primary: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #94a3b8;
+  --color-text-secondary: #9d9fa3;
+  --color-text-muted: #77808d;
 
-  --color-gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --color-gradient-1: linear-gradient(135deg, #de73a9 0%, #edadd3 100%);
   --color-gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --color-gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  --color-gradient-hero: linear-gradient(180deg, #0a0e27 0%, #1a1f4d 100%);
+  --color-gradient-hero: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -44,7 +44,7 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+  --shadow-glow: 0 0 40px rgba(241, 99, 151, 0.3);
 
   /* Transitions */
   --transition-fast: 0.2s ease;
@@ -102,7 +102,7 @@ body {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.3) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(247, 219, 238, 0.863) 0%, transparent 70%);
   top: -200px;
   right: -200px;
   animation: float 20s ease-in-out infinite;
@@ -113,9 +113,9 @@ body {
   position: absolute;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
-  bottom: -150px;
-  left: -150px;
+  background: radial-gradient(circle, rgba(247, 219, 238, 0.863) 0%, transparent 70%);
+  bottom: -200px;
+  left: -200px;
   animation: float 15s ease-in-out infinite reverse;
 }
 
@@ -150,7 +150,7 @@ body {
 .profile-glow {
   position: absolute;
   inset: -20px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(241, 99, 132, 0.4) 0%, transparent 70%);
   border-radius: 50%;
   z-index: -1;
   animation: pulse 3s ease-in-out infinite;
@@ -174,7 +174,7 @@ body {
   display: block;
   font-size: var(--font-size-3xl);
   font-weight: 800;
-  background: linear-gradient(135deg, #667eea 0%, #f093fb 100%);
+  background: linear-gradient(135deg, #ea6692 0%, #f093fb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -192,10 +192,11 @@ body {
 .bio {
   font-size: var(--font-size-md);
   color: var(--color-text-muted);
-  max-width: 600px;
+  max-width: 800px;
   line-height: 1.8;
   margin-bottom: var(--spacing-lg);
   animation: fadeInUp 1s ease-out 0.6s backwards;
+  white-space: pre-wrap;
 }
 
 .contact-links {
@@ -231,21 +232,20 @@ body {
 .social-link {
   display: inline-flex;
   align-items: center;
-  padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--color-bg-card);
-  backdrop-filter: blur(10px);
-  color: var(--color-text-primary);
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--color-gradient-1);
+  color: white;
   text-decoration: none;
   border-radius: var(--border-radius-md);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  font-weight: 500;
+  font-weight: 600;
   transition: all var(--transition-normal);
+  box-shadow: var(--shadow-md);
 }
 
 .social-link:hover {
-  background: var(--color-bg-card-hover);
-  border-color: var(--color-accent-primary);
   transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ===== Sections ===== */

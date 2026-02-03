@@ -96,15 +96,13 @@ function renderEducation(): void {
 
     item.innerHTML = `
       <div class="timeline-card">
+        ${edu.logo ? `<img src="${edu.logo}" class="education-logo" alt="Logo" />` : ''}
         <div class="timeline-header">
           <div>
-            <div class="timeline-title">
-              ${edu.degree}
-              ${edu.logo ? `<img src="${edu.logo}" class="education-logo" alt="Logo" />` : ''}
-            </div>
+            <div class="timeline-title">${edu.degree}</div>
             <div class="timeline-company">${edu.institution}</div>
           </div>
-          <div class="timeline-period">${edu.period}</div>
+          ${edu.period ? `<div class="timeline-period">${edu.period}</div>` : ''}
         </div>
         <div class="timeline-description">${edu.description}</div>
       </div>

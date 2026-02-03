@@ -278,6 +278,12 @@ body {
   font-size: var(--font-size-lg);
 }
 
+.stats-section {
+  padding: var(--spacing-xs) 0;
+  position: relative;
+}
+
+
 /* ===== Logos Section ===== */
 .center-title {
   justify-content: center;
@@ -292,6 +298,7 @@ body {
   flex-wrap: wrap;
   margin-top: var(--spacing-lg);
 }
+
 
 .company-logo {
   font-size: var(--font-size-lg);
@@ -438,6 +445,8 @@ body {
 }
 
 .timeline-card {
+  position: relative;
+  overflow: hidden;
   background: var(--color-bg-card);
   backdrop-filter: blur(10px);
   padding: var(--spacing-lg);
@@ -461,8 +470,8 @@ body {
 }
 
 .timeline-img {
-  width: 200px;
-  height: 150px;
+  width: 300px;
+  height: 250px;
   object-fit: cover;
   border-radius: var(--border-radius-sm);
   cursor: pointer;
@@ -495,10 +504,17 @@ body {
 }
 
 .education-logo {
-  height: 70px;
+  position: absolute;
+  right: var(--spacing-lg);
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100px;
   width: auto;
   object-fit: contain;
-  border-radius: 4px;
+  opacity: 0.15;
+  filter: grayscale(100%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .timeline-company {
@@ -528,7 +544,8 @@ body {
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-xl);
   text-align: center;
-  max-width: 500px;
+  max-width: 400px;
+  max-height: 300px;
   width: 100%;
   backdrop-filter: blur(10px);
   transition: transform var(--transition-normal);
@@ -586,6 +603,7 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--spacing-lg);
 }
+
 
 .project-card {
   background: var(--color-bg-card);
@@ -662,6 +680,25 @@ body {
 .project-link:hover {
   color: var(--color-accent-secondary);
   gap: var(--spacing-sm);
+}
+
+.project-img {
+  height: 400px;
+  width: auto;
+  object-fit: contain;
+  margin: var(--spacing-sm);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--border-radius-lg);
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xl);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-lg);
+  padding-bottom: 30px;
 }
 
 /* ===== Footer ===== */
